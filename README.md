@@ -1,8 +1,13 @@
-# Bare Metal Programming
+# Pyusb Pcap Replay Overview and Purpose
 
-This repository contains scripts related to bare metal programming of the TI AM3517, a replacement for the
-[TIs FLASHTOOL](http://www.ti.com/tool/FLASHTOOL).  The TI FLASHTOOL only supports specific host platforms (XP and Windows 7 32 bit).  The
-bare metal programming scripts allow you to perform the same functions on any system with support for python and [pyusb](https://walac.github.io/pyusb/)
+This repository contains scripts originally written for bare metal programming of the TI AM3517, a replacement for the
+[TI's FLASHTOOL](http://www.ti.com/tool/FLASHTOOL).  The TI FLASHTOOL only supports specific host platforms (XP and Windows 7 32 bit).  The
+scripts allow you to perform the same functions on any system with support for python and [pyusb](https://walac.github.io/pyusb/)
+
+Although it was originally intended for replacing the TI flash tool, this repository will be useful in any case that you'd like
+to replay a USB sequence captured from another device with [usbpcap](http://desowin.org/usbpcap/tour.html), possibly useful for other
+obsolete and no longer supported manufacturing tools.  You just need to set the VID and PID appropriately in usb_replay.py to correspond
+to other devices
 
 ## Installing
 

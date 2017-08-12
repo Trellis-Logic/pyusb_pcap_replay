@@ -118,6 +118,7 @@ class USBReplay:
 
 
 if __name__ == '__main__':
+    # Hard coded to AM3517 VID/PID combo, probably should make this configurable if it's useful on other devices
     VID=0x0451
     PID=0xd009
 
