@@ -50,11 +50,10 @@ rt to this format using File->Export Packet Dissections->as XML - "PDML" packet 
 
 ## Replay capture file
 Once you've captured the file on the XP or Windows 7 32 bit machine, you can replay the trace on any system supporting python and pyusb
-Connect the usb otg port to the PC
-Run ```python usb_replay.py <path_to_pdml_file>``` where <path_to_pdml_file> is the path to the file captured using pcap and expored to PDML as described above.
-Connect the device when prompted by the script.
-When using the development board, ensure the dip switches are set such that USB boot attempts will occur early in the boot sequence.  Switch setting 1 and 4 on puts USB boot
-first in the boot sequence.
+1. Connect the usb otg port to the PC
+2. Run ```python usb_replay.py <path_to_pdml_file>``` where <path_to_pdml_file> is the path to the file captured using pcap and expored to PDML as described above.
+3. Connect the device when prompted by the script.
+4. When using the development board, ensure the dip switches are set such that USB boot attempts will occur early in the boot sequence.  Switch setting 1 and 4 on puts USB boot first in the boot sequence.
 
 
 ## Troubleshooting/Known Issues
