@@ -20,12 +20,12 @@ to other devices
 6. Select the zadig.cfg file in the "config" directory of this repo
 7. Click "Install Driver"
 #### Windows 8.1 or later instructions
-1. On Windows 8.1 or later, you will need to disable the BOS descriptor enumeration using a special registry key.
-** Open regedit and go to HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\usbflags\0451D0090000 (create this key if it doesn't exist).
-** Add a Binary value with name "SkipBOSDescriptorQuery" and value 01 00 00 00
-** On Windows 8.1 you may also need to install [KB 2967917](https://www.microsoft.com/en-us/download/details.aspx?id=43488).
+1. On Windows 8.1 or later, you will need to disable the BOS descriptor enumeration using a special registry key.  This is only necessary for the TI AM3517 bootloader, which doesn't support this descriptor.
+* Open regedit and go to HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\usbflags\0451D0090000 (create this key if it doesn't exist).
+* Add a Binary value with name "SkipBOSDescriptorQuery" and value 01 00 00 00
+* On Windows 8.1 you may also need to install [KB 2967917](https://www.microsoft.com/en-us/download/details.aspx?id=43488).
 This is not needed on Windows 10.
-** See the video at [this link](https://www.youtube.com/watch?v=_Utrb5hNRZk) for details.
+* See the video at [this link](https://www.youtube.com/watch?v=_Utrb5hNRZk) for details.
 
 ## Setup Capture
 Start by capturing a sequence of the programming operations performed by [TIs FLASHTOOL](http://www.ti.com/tool/FLASHTOOL).  Install this tool on a Windows XP or Windows 7 system.
