@@ -28,12 +28,12 @@ This is not needed on Windows 10.
 * See the video at [this link](https://www.youtube.com/watch?v=_Utrb5hNRZk) for details.
 
 ## Setup Capture
-Start by capturing a sequence of the programming operations performed by [TIs FLASHTOOL](http://www.ti.com/tool/FLASHTOOL).  Install this tool on a Windows XP or Windows 7 system.
-Download and install [wireshark](https://www.wireshark.org/) and [usbpcap](http://desowin.org/usbpcap/tour.html).  Use the instructions on the usbpcap site to configure usbpcap settings.
+* Start by capturing a sequence of the programming operations performed by [TIs FLASHTOOL](http://www.ti.com/tool/FLASHTOOL).  Install this tool on a Windows XP or Windows 7 32 bit system.
+* Download and install [wireshark](https://www.wireshark.org/) and [usbpcap](http://desowin.org/usbpcap/tour.html).  Use the instructions on the usbpcap site to configure usbpcap settings.
 
 ## Run Capture
 1.  Start the capture on the usbpcap endpoint configured in the previous step.
-2.  Run the TI Flash utility to capture the event you'd like to mimic
+2.  Run the TI Flash utility to capture the event you'd like to replay.
 3.  Filter the trace to only contain data for the specified device if more than one device is included on the root hub.  Use a filter like:
 ```
 usb.src == "2.3.0" || usb.src == "2.3.1" || usb.dst == "2.3.0" || usb.dst == "2.3.1"
@@ -41,7 +41,7 @@ usb.src == "2.3.0" || usb.src == "2.3.1" || usb.dst == "2.3.0" || usb.dst == "2.
 Where 2.3.0 and 2.3.1 are the endpoints shown in the wireshark "Source" and "Destination" columns for the device you want to capture.
 4.  Use File->Export Specified Packets to export the filtered data to a .pcap file.
 5.  Open the pcap file with filtered content
-4.  Export to the PDML format in wireshark using File->Export Packet Dissections->as XML - "PDML" packet details file
+6.  Export to the PDML format in wireshark using File->Export Packet Dissections->as XML - "PDML" packet details file
 rt to this format using File->Export Packet Dissections->as XML - "PDML" packet details file
  * Make sure "Packet Details" include "All expanded"
  * Make sure "Packet Bytes" checkbox is checked.
